@@ -1,11 +1,16 @@
 import path from "node:path";
 import nodeExternals from "webpack-node-externals";
 import { Configuration, node } from "webpack";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+
+const isDev = process.env.NODE_ENV === "development";
 
 const config: Configuration = {
+  mode: isDev ? "development" : "production",
+  devtool: isDev ? "inline-source-map" : undefined,
   target: "node",
   entry: {
-    main: "./server/index.ts",
+    main: "./server/index.tsx",
   },
   output: {
     filename: "main.js",
@@ -21,6 +26,7 @@ const config: Configuration = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    plugins: [new TsconfigPathsPlugin()],
   },
   externals: [nodeExternals()],
 };
