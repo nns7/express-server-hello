@@ -3,17 +3,11 @@ import nodeExternals from "webpack-node-externals";
 import { Configuration, node } from "webpack";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
-const isDev = process.env.NODE_ENV === "development";
-
-const config: Configuration = {
-  mode: isDev ? "development" : "production",
-  devtool: isDev ? "inline-source-map" : undefined,
-  target: "node",
-  entry: {
-    main: "./server/index.tsx",
-  },
+const browserConfig: Configuration = {
+  mode: "production",
+  entry: "./src/client/index.tsx",
   output: {
-    filename: "main.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -25,10 +19,32 @@ const config: Configuration = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    extensions: [".ts", ".tsx"],
     plugins: [new TsconfigPathsPlugin()],
   },
   externals: [nodeExternals()],
 };
 
-export default config;
+const serverConfig: Configuration = {
+  mode: "production",
+  entry: "./src/server/index.tsx",
+  output: {
+    filename: "server.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".ts", ".tsx"],
+    plugins: [new TsconfigPathsPlugin()],
+  },
+  externals: [nodeExternals()],
+};
+
+module.exports = [browserConfig, serverConfig];

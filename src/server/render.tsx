@@ -22,7 +22,7 @@ const renderTemplate: T = (props) => `
             <meta name="description" content="${props.description}" />
         </head>
         <body>
-            <div id="root">${props.content}</div>
+            <div id="react-root">${props.content}</div>
         </body>
     </html>
     `;
