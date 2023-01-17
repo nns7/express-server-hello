@@ -14,7 +14,7 @@ type T = (
 
 const renderTemplate: T = (props) => `
     <!DOCTYPE html>
-    <html>
+    <html class="scroll-smooth">
         <head>
             <meta charSet="utf-8" />
             <title>${props.title}</title>
@@ -23,6 +23,8 @@ const renderTemplate: T = (props) => `
         </head>
         <body>
             <div id="react-root">${props.content}</div>
+            <script defer="defer" src="bundle.js"></script>
+            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
         </body>
     </html>
     `;
