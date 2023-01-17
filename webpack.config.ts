@@ -2,6 +2,7 @@ import path from "node:path";
 import nodeExternals from "webpack-node-externals";
 import { Configuration, node } from "webpack";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const browserConfig: Configuration = {
   mode: "production",
@@ -22,7 +23,13 @@ const browserConfig: Configuration = {
     extensions: [".ts", ".tsx"],
     plugins: [new TsconfigPathsPlugin()],
   },
-  externals: [nodeExternals()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      inject: "body",
+      scriptLoading: "defer",
+    }),
+  ],
 };
 
 const serverConfig: Configuration = {
