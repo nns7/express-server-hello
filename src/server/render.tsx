@@ -20,11 +20,11 @@ const renderTemplate: T = (props) => `
             <title>${props.title}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="${props.description}" />
+            <link href="./assets/styles.css" rel="stylesheet" />
         </head>
         <body>
             <div id="react-root">${props.content}</div>
             <script defer="defer" src="bundle.js"></script>
-            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
         </body>
     </html>
     `;

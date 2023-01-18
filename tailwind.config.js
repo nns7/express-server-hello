@@ -1,1 +1,8 @@
-// intellisenseを有効にするためだけの空ファイル
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
