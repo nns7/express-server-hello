@@ -15,7 +15,15 @@ const browserConfig: Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "ts-loader",
+        use: [
+          {
+            loader: "babel-loader",
+            options: { presets: ["@babel/preset-env", "@babel/react"] },
+          },
+          {
+            loader: "ts-loader",
+          },
+        ],
       },
     ],
   },
@@ -43,7 +51,15 @@ const serverConfig: Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "ts-loader",
+        use: [
+          {
+            loader: "babel-loader",
+            options: { presets: ["@babel/preset-env", "@babel/react"] },
+          },
+          {
+            loader: "ts-loader",
+          },
+        ],
       },
     ],
   },
