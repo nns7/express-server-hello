@@ -37,6 +37,7 @@ const browserConfig: Configuration = {
       template: "./public/index.html",
       inject: "body",
       scriptLoading: "defer",
+      filename: "main.html",
     }),
     new CopyWebpackPlugin({
       patterns: [
