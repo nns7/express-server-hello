@@ -6,6 +6,8 @@ import { render } from "src/server/render";
 const app = express();
 const port = 9000;
 
+app.use(express.static("dist"));
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
