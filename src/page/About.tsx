@@ -8,11 +8,11 @@ const About: FC = () => (
         width="44"
         height="44"
         viewBox="0 0 24 24"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke="#2c3e50"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <circle cx="12" cy="7" r="4" />
@@ -56,11 +56,11 @@ const About: FC = () => (
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#2c3e50"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
@@ -71,11 +71,11 @@ const About: FC = () => (
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#2c3e50"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
@@ -86,11 +86,11 @@ const About: FC = () => (
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#2c3e50"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
@@ -102,11 +102,11 @@ const About: FC = () => (
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#2c3e50"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <circle cx="16" cy="12" r="1" />
@@ -122,11 +122,11 @@ const About: FC = () => (
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#2c3e50"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M6.357 9c-2.637 .68 -4.357 1.845 -4.357 3.175c0 2.107 4.405 3.825 9.85 3.825c.74 0 1.26 -.039 1.95 -.097" />
