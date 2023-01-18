@@ -3,6 +3,7 @@ import nodeExternals from "webpack-node-externals";
 import { Configuration, node } from "webpack";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const browserConfig: Configuration = {
   mode: "production",
@@ -36,6 +37,14 @@ const browserConfig: Configuration = {
       template: "./public/index.html",
       inject: "body",
       scriptLoading: "defer",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: `${__dirname}/src/assets/`,
+          to: `${__dirname}/dist/assets/`,
+        },
+      ],
     }),
   ],
 };

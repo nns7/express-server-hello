@@ -1,29 +1,34 @@
 import { FC } from "react";
 
-const items = [
+type item = {
+  id: number;
+  title: string;
+  href: string;
+  description: string;
+  imageUrl: string;
+};
+
+const items: item[] = [
   {
     id: 1,
     title: "草原",
     href: "#",
     description: "草原をアピールするランディングサイトを構築しました。",
-    imageUrl:
-      "https://1.bp.blogspot.com/-aC2jXDBJcuY/VpjBp16ShbI/AAAAAAAA25w/pL6seXQvsM0/s1600/bg_natural_sougen.jpg",
+    imageUrl: "./assets/bg_natural_sougen.jpg",
   },
   {
     id: 2,
     title: "森",
     href: "#",
     description: "森を全世界に発信するブログサイトを構築しました。",
-    imageUrl:
-      "https://2.bp.blogspot.com/-RkvdK3-Ucwo/WwJZee1zZ7I/AAAAAAABMFE/2ArQsb5uZr8qY-9IO3igVn5Gock0h420ACLcBGAs/s800/bg_rain_natural_mori.jpg",
+    imageUrl: "./assets/bg_rain_natural_mori.jpg",
   },
   {
     id: 3,
     title: "犬と女性",
     href: "#",
     description: "犬と女性です。",
-    imageUrl:
-      "https://3.bp.blogspot.com/-IbIA1qLx0E4/WlGoVA3wHlI/AAAAAAABJjQ/S1Fvj3hSTW0CWQ8vR7E8UmCoUxfMuZr_gCLcBGAs/s800/pet_dog_sanpo_yugata_woman.png",
+    imageUrl: "./assets/pet_dog_sanpo_yugata_woman.png",
   },
 ];
 

@@ -26,7 +26,7 @@ const About: FC = () => (
           <div className="mx-auto flex justify-center items-center w-48 h-48 max-w-full rounded-full overflow-hidden">
             <img
               className="h-full w-full object-cover"
-              src="https://2.bp.blogspot.com/-E0iVRq7GiXI/VaYrTddMLzI/AAAAAAAAvoI/3zSlmjimdII/s800/space_kaseijin.png"
+              src="./assets/space_kaseijin.png"
               decoding="async"
               loading="lazy"
             />
